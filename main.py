@@ -1,55 +1,30 @@
 # 🚨 Don't change the code below 👇
-print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want? S, M, or L ")
-add_pepperoni = input("Do you want pepperoni? Y or N ")
-extra_cheese = input("Do you want extra cheese? Y or N ")
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-total = 0
-if size == "S":
-    total += 15
-    if add_pepperoni == "Y":
-        total += 2
-        if extra_cheese == "Y":
-            total +=1
-            print(f"Your final bill is: ${total}.")
-        else:
-            print(f"Your final bill is: ${total}.")
-    else:
-        if extra_cheese == "Y":
-            total +=1
-            print(f"Your final bill is: ${total}.")
-        else:
-            print(f"Your final bill is: ${total}.")
-elif size == "M":
-    total += 20
-    if add_pepperoni == "Y":
-        total += 3
-        if extra_cheese == "Y":
-            total +=1
-            print(f"Your final bill is: ${total}.")
-        else:
-            print(f"Your final bill is: ${total}.")
-    else:
-        if extra_cheese == "Y":
-            total +=1
-            print(f"Your final bill is: ${total}.")
-        else:
-            print(f"Your final bill is: ${total}.")
-elif size == "L":
-    total += 25
-    if add_pepperoni == "Y":
-        total += 3
-        if extra_cheese == "Y":
-            total +=1
-            print(f"Your final bill is: ${total}.")
-        else:
-            print(f"Your final bill is: ${total}.")
-    else:
-        if extra_cheese == "Y":
-            total +=1
-            print(f"Your final bill is: ${total}.")
-        else:
-            print(f"Your final bill is: ${total}.")
+combinedName = name1 + name2
+loweredCase = combinedName.lower()
 
+total = 0
+total2 = 0
+total += loweredCase.count("t")
+total += loweredCase.count("r")
+total += loweredCase.count("u")
+total += loweredCase.count("e")
+total2 += loweredCase.count("l")
+total2 += loweredCase.count("o")
+total2 += loweredCase.count("v")
+total2 += loweredCase.count("e")
+
+number = str(total)+str(total2)
+intNumber = int(number)
+
+if intNumber<10 or intNumber>90:
+    print(f"Your score is {intNumber}, you go together like coke and mentos.")
+elif intNumber>40 and intNumber<50:
+    print(f"Your score is {intNumber}, you are alright together.")
+else:
+    print(f"Your score is {intNumber}.")
